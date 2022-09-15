@@ -44,13 +44,14 @@ void main() {
         double tempoAplicacao = double.parse(inputTempoDaAplicacao);
         double taxaJuros = double.parse(inputTaxaJuros);
         double jurosTotal = calculadoraJuros.jurosSimples(
-          capitalConvertido, taxaJuros, tempoAplicacao);
+            capitalConvertido, taxaJuros, tempoAplicacao);
         double montanteTotal = capitalConvertido + jurosTotal;
 
         String? jurosTotalReal = jurosTotal.toStringAsFixed(2);
         String? montanteTotalReal = montanteTotal.toStringAsFixed(2);
 
-        print('Durante um periodo de $tempoAplicacao meses, você acumulou $jurosTotalReal reais de juros, somando um montade de $montanteTotalReal reais.');
+        print(
+            'Durante um periodo de $tempoAplicacao meses, você acumulou $jurosTotalReal reais de juros, somando um montante de $montanteTotalReal reais.');
         break;
       case jurosComposto:
         print('Vamos calcular o juros composto: ');
@@ -77,13 +78,14 @@ void main() {
         double tempoAplicacao = double.parse(inputTempoDaAplicacao);
         double taxaJuros = double.parse(inputTaxaJuros);
         double jurosTotal = calculadoraJuros.jurosComposto(
-          capitalConvertido, taxaJuros, tempoAplicacao);
+            capitalConvertido, taxaJuros, tempoAplicacao);
         double montanteTotal = capitalConvertido + jurosTotal;
 
         String? jurosTotalReal = jurosTotal.toStringAsFixed(2);
         String? montanteTotalReal = montanteTotal.toStringAsFixed(2);
 
-        print('Durante um periodo de $tempoAplicacao meses, você acumulou $jurosTotalReal reais de Juros, somando um montade de $montanteTotalReal reais.');
+        print(
+            'Durante um periodo de $tempoAplicacao meses, você acumulou $jurosTotalReal reais de Juros, somando um montante de $montanteTotalReal reais.');
         break;
       case sair:
         print('Obrigado por usar a calculadora!');
